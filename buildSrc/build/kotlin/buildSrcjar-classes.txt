@@ -1,0 +1,1 @@
+C:\Users\carad\Developer\CreditMatch\buildSrc\build\classes\kotlin\main\Config.class;C:\Users\carad\Developer\CreditMatch\buildSrc\build\classes\kotlin\main\Dependencies.class;C:\Users\carad\Developer\CreditMatch\buildSrc\build\classes\kotlin\main\Versions.class

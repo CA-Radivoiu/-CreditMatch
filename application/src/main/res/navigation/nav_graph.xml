@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/startFragment"
+    android:id="@+id/nav_graph">
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.creditmatch.application.start.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_userCreditFormFragment"
+            app:destination="@id/userCreditFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userCreditFormFragment"
+        android:name="com.example.creditmatch.application.creditform.ui.UserCreditFormFragment"
+        android:label="fragment_credit_form"
+        tools:layout="@layout/fragment_user_credit_form" >
+        <action
+            android:id="@+id/action_userCreditFormFragment_to_creditFormFragment"
+            app:destination="@id/creditFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creditFormFragment"
+        android:name="com.example.creditmatch.application.creditform.ui.CreditFormFragment"
+        android:label="CreditFormFragment" >
+        <action
+            android:id="@+id/action_creditFormFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.creditmatch.application.result.ResultFragment"
+        android:label="ResultFragment" />
+</navigation>

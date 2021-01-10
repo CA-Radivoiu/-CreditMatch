@@ -1,0 +1,5 @@
+rootProject.name = "CreditMatch"
+include ':app'
+include ':domain'
+include ':application'
+include ':dal'
