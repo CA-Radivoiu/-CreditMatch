@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.creditmatch.application.karma.datainput.DataInputViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_height="match_parent"
+        tools:context=".karma.datainput.DataInputFragment">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/edit_text_border"
+            android:text="Hello @user's first name!"
+            android:gravity="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_logo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/gender"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:hint="Gender"
+            android:background="@drawable/edit_text_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+        <EditText
+            android:id="@+id/years"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:hint="Years in Workforce"
+            android:background="@drawable/edit_text_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gender" />
+
+        <EditText
+            android:id="@+id/salary"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:hint="Month salary"
+            android:background="@drawable/edit_text_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/years" />
+
+        <EditText
+            android:id="@+id/expenses"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:hint="Monthly fixed expenses"
+            android:background="@drawable/edit_text_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/salary" />
+
+        <EditText
+            android:id="@+id/amountdept"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:hint="Amount of debt"
+            android:background="@drawable/edit_text_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/expenses" />
+
+        <EditText
+            android:id="@+id/durationdept"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:hint="Duration of debt"
+            android:background="@drawable/edit_text_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/amountdept" />
+
+        <ImageView
+            android:id="@+id/button_gobackdashboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:onClick="@{() -> viewModel.showDashboardScreen()}"
+            android:src="@drawable/usethistocalculate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
