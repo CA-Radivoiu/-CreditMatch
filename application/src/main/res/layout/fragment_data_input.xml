@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -8,9 +10,7 @@
             type="com.example.creditmatch.application.karma.datainput.DataInputViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:background="#fff"
         android:layout_height="match_parent"
@@ -25,13 +25,15 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/t"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:background="@drawable/edit_text_border"
-            android:text="Hello @user's first name!"
             android:gravity="center"
+            android:text="Hello @user's first name!"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@id/iv_logo"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,6 +43,8 @@
             android:layout_height="50dp"
             android:layout_marginTop="40dp"
             android:hint="Gender"
+            android:inputType = "number"
+            android:text="@={viewModel.gender}"
             android:background="@drawable/edit_text_border"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -50,6 +54,8 @@
             android:id="@+id/years"
             android:layout_width="300dp"
             android:layout_height="50dp"
+            android:inputType = "number"
+            android:text="@={viewModel.years}"
             android:layout_marginTop="12dp"
             android:hint="Years in Workforce"
             android:background="@drawable/edit_text_border"
@@ -63,6 +69,8 @@
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
             android:hint="Month salary"
+            android:text="@={viewModel.monthSalary}"
+            android:inputType = "number"
             android:background="@drawable/edit_text_border"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -74,6 +82,8 @@
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
             android:hint="Monthly fixed expenses"
+            android:text="@={viewModel.monthlyFixed}"
+            android:inputType = "number"
             android:background="@drawable/edit_text_border"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -85,6 +95,8 @@
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
             android:hint="Amount of debt"
+            android:text="@={viewModel.amountDebt}"
+            android:inputType = "number"
             android:background="@drawable/edit_text_border"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -94,6 +106,8 @@
             android:id="@+id/durationdept"
             android:layout_width="300dp"
             android:layout_height="50dp"
+            android:text="@={viewModel.amountDuration}"
+            android:inputType = "number"
             android:layout_marginTop="12dp"
             android:hint="Duration of debt"
             android:background="@drawable/edit_text_border"

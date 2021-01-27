@@ -12,6 +12,7 @@ import com.example.creditmatch.application.R
 import com.example.creditmatch.application.databinding.FragmentDataInputBinding
 import com.example.creditmatch.application.databinding.FragmentLogInBinding
 import com.example.creditmatch.application.karma.login.LogInViewModel
+import com.example.creditmatch.application.utils.Vars
 
 class DataInputFragment : Fragment() {
     //region Vars
@@ -36,6 +37,7 @@ class DataInputFragment : Fragment() {
         viewModel.showDashboardScreen.observe(viewLifecycleOwner) {
             findNavController().navigate(R.id.action_dataInputFragment_to_creditScoreDashboardFragment)
         }
+        binding.t.text = "Hello ${Vars.firstName}"
     }
     //endregion
 }

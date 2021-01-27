@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -8,9 +10,7 @@
             type="com.example.creditmatch.application.karma.register.RegisterViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#fff"
@@ -32,6 +32,7 @@
             android:id="@+id/firstName"
             android:layout_width="300dp"
             android:layout_height="50dp"
+            android:text="@={viewModel.firstName}"
             android:layout_marginTop="40dp"
             android:background="@drawable/edit_text_border"
             android:hint="First Name"
@@ -43,6 +44,7 @@
             android:id="@+id/lastName"
             android:layout_width="300dp"
             android:layout_height="50dp"
+            android:text="@={viewModel.lastName}"
             android:layout_marginTop="12dp"
             android:background="@drawable/edit_text_border"
             android:hint="Last Name"
@@ -54,10 +56,12 @@
             android:id="@+id/emailAdress"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/edit_text_border"
             android:hint="Email address"
+            android:text="@={viewModel.emailAdress}"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lastName" />
 
@@ -65,7 +69,9 @@
             android:id="@+id/password"
             android:layout_width="300dp"
             android:layout_height="50dp"
+            android:inputType="textPassword"
             android:layout_marginTop="12dp"
+            android:text="@={viewModel.password}"
             android:background="@drawable/edit_text_border"
             android:hint="Password"
             app:layout_constraintEnd_toEndOf="parent"
@@ -76,7 +82,9 @@
             android:id="@+id/retypePassword"
             android:layout_width="300dp"
             android:layout_height="50dp"
+            android:inputType="textPassword"
             android:layout_marginTop="12dp"
+            android:text="@={viewModel.confPassword}"
             android:background="@drawable/edit_text_border"
             android:hint="Retype password"
             app:layout_constraintEnd_toEndOf="parent"

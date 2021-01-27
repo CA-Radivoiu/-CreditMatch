@@ -7,6 +7,7 @@ import androidx.room.Room
 import com.example.creditmatch.application.creditform.data.BankRepository
 import com.example.creditmatch.application.creditform.data.UserRepository
 import com.example.creditmatch.dal.AppDatabase
+import com.example.creditmatch.dal.dao.AccountDao
 import com.example.creditmatch.dal.dao.UserDao
 import com.example.creditmatch.dal.repository.BankRepositoryImpl
 import com.example.creditmatch.dal.repository.UserRepositoryImpl
@@ -106,6 +107,9 @@ object AppModule {
     @Provides
     fun provideUserDao(db: AppDatabase): UserDao = db.userDao
 
+    @Singleton
+    @Provides
+    fun provideAccountDao(db: AppDatabase): AccountDao = db.accountDao
 
 
 }

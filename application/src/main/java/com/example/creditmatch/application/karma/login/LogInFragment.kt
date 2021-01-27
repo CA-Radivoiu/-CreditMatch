@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.creditmatch.application.BR
@@ -37,6 +38,9 @@ class LogInFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel.showDashboardScreen.observe(viewLifecycleOwner) {
             findNavController().navigate(R.id.action_logInFragment_to_creditScoreDashboardFragment)
+        }
+        viewModel.showToastAlert.observe(viewLifecycleOwner) {
+            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
         }
     }
     //endregion

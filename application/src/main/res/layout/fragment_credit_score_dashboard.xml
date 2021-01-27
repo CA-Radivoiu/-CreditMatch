@@ -23,6 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/t"
         android:layout_width="0dp"
         android:layout_height="110dp"
         android:background="@drawable/edit_text_border"
@@ -49,14 +50,15 @@
     <TextView
         android:id="@+id/text_score_Result"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_height="220dp"
         android:textSize="180sp"
         android:layout_marginTop="10dp"
         android:textColor="#00ffff"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/text_score"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="62"/>
+        android:text="0"/>
 
     <ImageView
         android:id="@+id/button_updateinfo"

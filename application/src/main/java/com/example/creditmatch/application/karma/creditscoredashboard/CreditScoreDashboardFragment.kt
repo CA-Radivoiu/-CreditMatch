@@ -12,6 +12,7 @@ import com.example.creditmatch.application.R
 import com.example.creditmatch.application.databinding.FragmentCreditScoreDashboardBinding
 import com.example.creditmatch.application.databinding.FragmentLogInBinding
 import com.example.creditmatch.application.karma.login.LogInViewModel
+import com.example.creditmatch.application.utils.Vars
 
 
 class CreditScoreDashboardFragment : Fragment() {
@@ -40,6 +41,8 @@ class CreditScoreDashboardFragment : Fragment() {
         viewModel.showCreditOffersScreen.observe(viewLifecycleOwner) {
             findNavController().navigate(R.id.action_creditScoreDashboardFragment_to_creditOffersFragment)
         }
+        binding.textScoreResult.text = Vars.score.toString()
+        binding.t.text = "Hello ${Vars.firstName}"
     }
     //endregion
 }
